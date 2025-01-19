@@ -1,0 +1,15 @@
+{
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/file.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/(.*)",
+        "destination": "/file.html",
+        "statusCode": 404
+      }
+    ]
+  }
