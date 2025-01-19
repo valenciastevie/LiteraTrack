@@ -16,7 +16,7 @@ rel="stylesheet"
         function setResponsiveStylesheet() {
           const link = document.getElementById("stylesheet");
           const isMobile = window.innerWidth <= 768;
-          link.href = isMobile ? "/mobile.css" : "/style.css";
+          link.href = isMobile ? "./public/mobile.css" : "./public/style.css";
 
           console.log(`Screen width: ${window.innerWidth}px`);
           console.log(`Applied stylesheet: ${link.href}`);
