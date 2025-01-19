@@ -2,13 +2,13 @@
     "rewrites": [
       {
         "source": "/(.*)",
-        "destination": "/file.html"
+        "destination": "public/file.html"
       }
     ],
     "redirects": [
       {
         "source": "/(.*)",
-        "destination": "/file.html",
+        "destination": "public/file.html",
         "statusCode": 404
       }
     ]
