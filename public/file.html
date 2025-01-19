@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap"
+rel="stylesheet"
+      id="stylesheet">
+
+    <title>LiteraTrack</title>
+
+    <script>
+      window.addEventListener("load", function () {
+        function setResponsiveStylesheet() {
+          const link = document.getElementById("stylesheet");
+          const isMobile = window.innerWidth <= 768;
+          link.href = isMobile ? "mobile.css" : "style.css";
+
+          console.log(`Screen width: ${window.innerWidth}px`);
+          console.log(`Applied stylesheet: ${link.href}`);
+        }
+
+        // Run once on load
+        setResponsiveStylesheet();
+
+        // Add resize event listener for dynamic resizing
+        window.addEventListener("resize", setResponsiveStylesheet);
+      });
+    </script>
+  </head>
+
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div class="section1">
+      <img src="Icon.png" class="logo-section1" />
+      <div class="paragraph">
+        <h2 style="text-align: left">LiteraTrack</h2>
+        <p>
+          Peningkatan kualitas dan pemerataan pendidikan Indonesia, dapat kita
+      dukung bersama dengan meningkatkan daya literasi, yang dapat dimulai
+      dengan membangun kebiasaan membaca. Bersama <b>LiteraTrack</b>, mari
+      lanjutkan perjuangan peningkatan daya literasi masyarakat Indonesia, untuk
+      Indonesia yang lebih berkualitas!
+          <br /><br />
+        </p>
+        <div class="scrollrect">
+          <a href="#section2" class="scrollitem">Mulai membaca >></a>
+        </div>
+
+        <br />
+      </div>
+    </div>
+    <div id="section2">
+      <div class="h1bar">
+        <h1><img class="logo" src="Icon.png" />LiteraTrack</h1>
+      </div>
+
+      <div class="navbaritem">
+        <a href="file.html" class="navitem12">Home</a>
+        <a href="progress.html" class="navitem12">Progress</a>
+        <a href="aboutus.html" class="navitem12">About Us</a>
+      </div>
+      <div class="levelbg1-top">
+        <h3>Level 1</h3>
+      </div>
+      <div class="levelbg1-bottom">
+        <!-- gambar per kategori-->
+        <a href="fiksi1.html"><img src="fiksi.jpg" alt="Fiksi" /></a>
+        <a href="non1.html"><img src="non.jpg" alt="Non-Fiksi" /></a>
+        <a href="berita1.html"><img src="berita.jpg" alt="Berita" /></a>
+
+        <div class="levelbar">
+          <a href="fiksi1.html" class="leveltext">Fiksi</a>
+        </div>
+
+        <div class="levelbar">
+          <a href="non1.html" class="leveltext">Non-fiksi</a>
+        </div>
+
+        <div class="levelbar">
+          <a href="berita1.html" class="leveltext">Berita</a>
+        </div>
+      </div>
+
+      <div class="levelbg2-top">
+        <h3>Level 2</h3>
+      </div>
+      <div class="levelbg2-bottom">
+        <a href="fiksi2.html"><img src="fiksi2.jpg" alt="Fiksi" /></a>
+        <a href="non2.html"><img src="non2.jpg" alt="Non-Fiksi" /></a>
+        <a href="berita2.html"><img src="berita2.jpg" alt="Berita" /></a>
+
+        <div class="levelbar">
+          <a href="fiksi2.html" class="leveltext">Fiksi</a>
+        </div>
+        <div class="levelbar">
+          <a href="non2.html" class="leveltext">Non-fiksi</a>
+        </div>
+        <div class="levelbar">
+          <a href="berita2.html" class="leveltext">Berita</a>
+        </div>
+      </div>
+
+      <div class="levelbg3-top">
+        <h3>Level 3</h3>
+      </div>
+
+      <div class="levelbg3-bottom">
+        <a href="fiksi3.html"><img src="fiksi3.jpg" alt="Fiksi" /></a>
+        <a href="non3.html"><img src="non3.jpg" alt="Non-Fiksi" /></a>
+        <a href="berita3.html"><img src="berita3.jpg" alt="Berita" /></a>
+
+        <div class="levelbar">
+          <a href="fiksi3.html" class="leveltext">Fiksi</a>
+        </div>
+
+        <div class="levelbar">
+          <a href="non3.html" class="leveltext">Non-fiksi</a>
+        </div>
+
+        <div class="levelbar">
+          <a href="berita3.html" class="leveltext">Berita</a>
+        </div>
+      </div>
+      <footer>
+        <div class="text-footer">
+          <img class="logo-footer" src="Icon.png" />
+          Copyright &copy; 2025 LiteraTrack
+          <div class="design-by">Designed by: @levynse</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="topbutton.js"></script>
+</html>

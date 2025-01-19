@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+      id="stylesheet"
+    />
+
+    <title>LiteraTrack</title>
+    <script>
+      window.addEventListener("load", function () {
+        function setResponsiveStylesheet() {
+          const link = document.getElementById("stylesheet");
+          const isMobile = window.innerWidth <= 768;
+          link.href = isMobile ? "mobile.css" : "style.css";
+
+          console.log(`Screen width: ${window.innerWidth}px`);
+          console.log(`Applied stylesheet: ${link.href}`);
+        }
+
+        // Run once on load
+        setResponsiveStylesheet();
+
+        // Add resize event listener for dynamic resizing
+        window.addEventListener("resize", setResponsiveStylesheet);
+      });
+    </script>
+    <script src="progress.js"></script>
+  </head>
+
+  <body>
+    <div class="h1bar">
+      <h1><img class="logo" src="Icon.png" />LiteraTrack</h1>
+    </div>
+    <div class="navbaritem">
+      <a href="file.html" class="navitem12">Home</a>
+      <a href="progress.html" class="navitem12">Progress</a>
+      <a href="aboutus.html" class="navitem12">About Us</a>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <h3>Hari Pertama di Sekolah Baru</h3>
+    <div class="paragraph">
+      <p>
+        Hari itu adalah hari pertama Aisyah di sekolah barunya. Ia merasa campur
+        aduk antara senang dan cemas. Sejak pindah dari kota, Aisyah harus
+        beradaptasi dengan lingkungan dan teman-teman baru. Ia mengenakan
+        seragamnya dengan rapi dan membawa tas yang penuh dengan perlengkapan
+        sekolah. 
+        <br><br>
+        Sesampainya di sekolah, Aisyah langsung merasakan suasana yang
+        berbeda. Di depan gerbang, anak-anak berlarian dan tertawa. Ia merasa
+        sedikit terasing. "Semoga ada yang mau berteman," pikirnya dalam hati.
+        Dengan langkah pelan, Aisyah memasuki kelas yang sudah ramai. Ketika
+        masuk, semua mata langsung tertuju padanya. "Hai, siapa namamu?" tanya
+        seorang gadis berbaju merah yang duduk di depan. "Aku Aisyah," jawabnya
+        pelan. "Selamat datang! Aku Sari. Mari duduk di sampingku," ajak Sari
+        dengan ramah. Aisyah merasa lega dan langsung menuju ke bangku sebelah
+        Sari. 
+        <br><br>
+        Selama pelajaran, Aisyah mulai merasa lebih nyaman. Sari
+        memperkenalkannya kepada teman-teman lainnya. Mereka berbagi cerita dan
+        pengalaman, dan Aisyah mulai merasakan kehangatan pertemanan. Saat jam
+        istirahat, mereka bermain di halaman sekolah. Aisyah bermain bola
+        bersama Sari dan teman-teman baru lainnya. Tawa dan keceriaan mengisi
+        udara. 
+        <br><br>
+        Namun, ketika bel berbunyi, Aisyah menyadari bahwa ada satu anak,
+        Rudi, yang tampak kesepian di sudut. Ia tidak bermain dengan siapa pun
+        dan hanya duduk sendiri. Aisyah merasa tergerak untuk mendekatinya.
+        "Hai, Rudi! Kenapa kamu tidak ikut bermain?" tanyanya. Rudi tersenyum
+        kecil, "Aku tidak tahu cara bermain bola." Aisyah tersenyum dan berkata,
+        "Tidak apa-apa, ayo aku ajarkan!" Mereka berdua bergabung dengan
+        permainan, dan Rudi tampak semakin ceria. Aisyah merasa senang bisa
+        membuat teman baru dan membantu Rudi merasa diterima. 
+        <br><br>
+        Hari pertama di
+        sekolah baru itu berakhir dengan indah. Aisyah pulang dengan senyuman
+        lebar. Ia tahu bahwa meskipun awalnya sulit, dengan sedikit keberanian
+        dan kebaikan, ia bisa menemukan teman-teman dan membuat hari-harinya
+        lebih berarti. "Aku tidak sabar untuk kembali besok!" pikirnya sambil
+        melambaikan tangan kepada Sari dan Rudi yang juga pergi ke arah yang
+        sama.
+
+        <br /><br />
+        Sumber:
+        <a
+          href="https://www.tempo.co/politik/3-contoh-cerpen-tentang-kehidupan-sehari-hari-yang-penuh-makna-1144156"
+          >Hari Pertama di Sekolah Baru</a
+        >
+      </p>
+
+      <br /><br /><br />
+      <div id="timer">Reading time: 0:00</div>
+      <button
+        id="done-button"
+        disabled
+        class="button"
+        onclick="storeProgress('Level 1 - Hari Pertama di Sekolah Baru')"
+      >
+        Done!
+      </button>
+    </div>
+    <footer>
+      <div class="text-footer">
+        <img class="logo-footer" src="Icon.png" />
+        Copyright &copy; 2025 LiteraTrack
+        <div class="design-by">Designed by: @levynse</div>
+      </div>
+    </footer>
+  </body>
+  <script src="topbutton.js"></script>
+</html>
