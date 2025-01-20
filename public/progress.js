@@ -7,10 +7,9 @@ function storeProgress(taskId) {
     tasksDone.push(taskId);
     sessionStorage.setItem("tasksDone", JSON.stringify(tasksDone)); // Store updated list
 
-    // Redirect to index.html after the alert
-    window.location.href = "index.html";
+    // Redirect to file.html after the alert
+    window.location.href = "file.html";
   } else {
-    window.location.href = "index.html";
   }
 }
 
@@ -39,7 +38,7 @@ window.onload = function () {
   let storiesRead = { 1: [], 2: [], 3: [] };
 
   // Categorize tasks based on their levels
-  tasksDone.forEach(taskId => {
+  tasksDone.forEach((taskId) => {
     if (taskId.includes("Level 1")) {
       progress[1]++;
       storiesRead[1].push(taskId);
@@ -63,7 +62,9 @@ window.onload = function () {
 
 function updateProgress(progress) {
   for (let level = 1; level <= 3; level++) {
-    let percentage = Math.round((progress[level] / totalStoriesPerLevel[level]) * 100);
+    let percentage = Math.round(
+      (progress[level] / totalStoriesPerLevel[level]) * 100
+    );
     let dashOffsetTarget = 440 - (440 * percentage) / 100; // Calculate target stroke-dashoffset for circle
     let circle = document.getElementById(`circle${level}`);
     let progressText = document.getElementById(`level${level}-progress`);
@@ -86,19 +87,13 @@ function updateProgress(progress) {
   }
 }
 
-
-
 function displayRecap(storiesRead) {
   for (let level = 1; level <= 3; level++) {
     let recapElement = document.getElementById(`level${level}-recap`);
     if (storiesRead[level].length > 0) {
-      recapElement.innerHTML += `<br>${storiesRead[level].join('<br>')}`;
+      recapElement.innerHTML += `<br>${storiesRead[level].join("<br>")}`;
     } else {
       recapElement.innerHTML += `<br>Belum ada`;
     }
   }
 }
-
-
-
-
