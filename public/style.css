@@ -91,11 +91,14 @@ h2 {
   position: sticky;
   top: 145px;
   z-index: 10;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+  justify-items: center;                /* Center items horizontally in each cell */
+  gap: 5px;  
 }
 
 .navitem12 {
   padding: 0px 195px 0px 170px;
-  margin-left: 30px;
   margin-top: 10px;
 
   font-family: "Cormorant Garamond", serif;
@@ -105,10 +108,11 @@ h2 {
   text-align: center;
   align-items: center;
   text-decoration: none;
-
+  margin-left: 40px;
   color: #fffbde;
 
   border-right: 3px;
+  
 }
 
 h3 {
@@ -189,6 +193,7 @@ img {
   align-items: center;
   justify-content: center;
 }
+
 .levelbg1-top {
   width: auto;
   height: 40px;
