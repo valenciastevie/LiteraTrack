@@ -9,8 +9,7 @@ function storeProgress(taskId) {
 
     // Redirect to index.html after the alert
     window.location.href = "index.html";
-  } else {
-  }
+  } else
 }
 
 let number = document.getElementById("number");
