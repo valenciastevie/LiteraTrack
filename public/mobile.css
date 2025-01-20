@@ -173,22 +173,19 @@ img {
   background: url(fiksi.jpg);
   border: 3px solid #596758;
   border-radius: 10px;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .levelbar {
-  padding: 7px 20px 7px 20px;
+  padding: 5px 5px 5px 5px;
   width: 80px;
   height: 32px;
   background: #596758;
   border-radius: 10px;
-  display: inline;
-  margin-left: 27px;
-  margin-right: 10px;
+  text-align: center;
+  display: flex;      /* Center text inside the bar */
+  align-items: center;
+  justify-content: center;
 }
 
 .levelbg1-top {
@@ -204,6 +201,10 @@ img {
   height: 230px;
   background: #a3c2e6;
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+  justify-items: center;                /* Center items horizontally in each cell */
+  gap: 5px;     
 }
 
 .levelbg2-top {
@@ -219,6 +220,10 @@ img {
   height: 230px;
   background: #e1ccd1;
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+  justify-items: center;                /* Center items horizontally in each cell */
+  gap: 5px;  
 }
 
 .levelbg3-top {
@@ -234,6 +239,10 @@ img {
   height: 230px;
   background: #cbd7a9;
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+  justify-items: center;                /* Center items horizontally in each cell */
+  gap: 5px;  
 }
 
 .leveltext {
