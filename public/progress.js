@@ -7,9 +7,9 @@ function storeProgress(taskId) {
     tasksDone.push(taskId);
     sessionStorage.setItem("tasksDone", JSON.stringify(tasksDone)); // Store updated list
 
-    // Redirect to index.html after the alert
+    // Redirect to file.html after the alert
     window.location.href = "index.html";
-  } else
+  }
 }
 
 let number = document.getElementById("number");
