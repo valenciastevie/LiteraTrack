@@ -64,9 +64,6 @@ doneButton.addEventListener("click", () => {
   } else {
     alert("Progress saved!");
     clearInterval(timer); // Stop the timer
-        if (!tasksDone.includes(taskId)) {
-        tasksDone.push(taskId);
-        sessionStorage.setItem("tasksDone", JSON.stringify(tasksDone)); // Store updated list
 
          // Redirect to file.html after the alert
         window.location.href = "index.html";
