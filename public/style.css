@@ -308,6 +308,8 @@ img {
   height: 32px;
   background: #596758;
   border-radius: 10px;
+  display: inline;
+  margin-left: 380px;
   border-style: none;
   text-align: center;
   color: #fffbde;
