@@ -48,12 +48,12 @@ doneButton.addEventListener("click", () => {
   let taskId = doneButton.getAttribute("data-task-id"); // Get taskId dynamically
 
   if (timeElapsed < 60) {
-    alert("Progress didn't save because the reading time is under 1 minute.");
+    // alert("Progress didn't save because the reading time is under 1 minute.");
 
-    // Remove mistakenly stored progress
-    let tasksDone = JSON.parse(sessionStorage.getItem("tasksDone")) || [];
-    let updatedTasks = tasksDone.filter(id => id !== taskId);
-    sessionStorage.setItem("tasksDone", JSON.stringify(updatedTasks));
+    // // Remove mistakenly stored progress
+    // let tasksDone = JSON.parse(sessionStorage.getItem("tasksDone")) || [];
+    // let updatedTasks = tasksDone.filter(id => id !== taskId);
+    // sessionStorage.setItem("tasksDone", JSON.stringify(updatedTasks));
 
   } else {
     alert("Progress saved!");
@@ -73,10 +73,6 @@ doneButton.addEventListener("mouseover", function () {
 doneButton.addEventListener("mouseout", function () {
   doneButton.classList.remove("hovered");
 });
-
-// Start the timer when the page loads
-window.onload = startTimer;
-
 
 // Start the timer when the page loads
 window.onload = startTimer;
