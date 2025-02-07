@@ -39,32 +39,12 @@ function startTimer() {
 
     if (timeElapsed >= 60) {
       doneButton.disabled = false;
-      doneButton.classList.add("hovered-enabled"); // Add a class to indicate it's now hoverable
+      doneButton.classList.add("enabled"); // Add a class to indicate it's now enabled
     }
   }, 1000);
 }
 
-// Handle "Done!" button click
-doneButton.addEventListener("click", () => {
-  let taskId = doneButton.getAttribute("data-task-id"); // Get taskId dynamically
-
-  if (timeElapsed < 60) {
-    alert("Progress didn't save because the reading time is under 1 minute.");
-
-    // Remove mistakenly stored progress
-    let tasksDone = JSON.parse(sessionStorage.getItem("tasksDone")) || [];
-    let updatedTasks = tasksDone.filter(id => id !== taskId);
-    sessionStorage.setItem("tasksDone", JSON.stringify(updatedTasks));
-
-  } else {
-    alert("Progress saved!");
-    storeProgress(taskId);
-    clearInterval(timer);
-    window.location.href = "index.html"; // Redirect after saving
-  }
-});
-
-// Change button color on hover dynamically
+// Handle button hover after 60s
 doneButton.addEventListener("mouseover", function () {
   if (timeElapsed >= 60) {
     doneButton.classList.add("hovered");
