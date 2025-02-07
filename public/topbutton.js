@@ -53,6 +53,8 @@ function startTimer() {
     // Enable the Done button after 1 minute
     if (timeElapsed >= 60) {
       doneButton.disabled = false;
+      // Redirect to file.html after the alert
+    window.location.href = "index.html";
     }
   }, 1000);
 }
