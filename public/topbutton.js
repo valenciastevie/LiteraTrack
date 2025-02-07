@@ -48,7 +48,7 @@ doneButton.addEventListener("click", () => {
   let taskId = doneButton.getAttribute("data-task-id"); // Get taskId dynamically
 
   if (timeElapsed < 60) {
-    // alert("Progress didn't save because the reading time is under 1 minute.");
+    alert("Progress didn't save because the reading time is under 1 minute.");
 
     // // Remove mistakenly stored progress
     // let tasksDone = JSON.parse(sessionStorage.getItem("tasksDone")) || [];
