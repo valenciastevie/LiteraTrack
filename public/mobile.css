@@ -403,8 +403,10 @@ svg {
   border-radius: 10px;
 }
 .table-top {
-  width: 130px;
+  width: auto;
   height: 150px;
+  margin: auto;
+  padding-right: 10px;
   background-color: #bddcff;
   border-radius: 10px;
 }
