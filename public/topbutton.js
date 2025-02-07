@@ -61,6 +61,7 @@ function startTimer() {
 doneButton.addEventListener("click", () => {
   if (timeElapsed < 60) {
     alert("Progress didn't save because the reading time is under 1 minute.");
+    doneButton.disabled;
   } else {
     alert("Progress saved!");
     clearInterval(timer); // Stop the timer
