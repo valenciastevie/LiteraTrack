@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Select the timer and button elements
-// Select the timer and button elements
 const timerElement = document.getElementById("timer");
 const doneButton = document.getElementById("done-button");
 
@@ -40,6 +39,7 @@ function startTimer() {
 
     if (timeElapsed >= 60) {
       doneButton.disabled = false;
+      doneButton.classList.add("hovered-enabled"); // Add a class to indicate it's now hoverable
     }
   }, 1000);
 }
@@ -58,10 +58,21 @@ doneButton.addEventListener("click", () => {
 
   } else {
     alert("Progress saved!");
-    storeProgress(taskId); // Store progress only after 60 seconds
+    storeProgress(taskId);
     clearInterval(timer);
     window.location.href = "index.html"; // Redirect after saving
   }
+});
+
+// Change button color on hover dynamically
+doneButton.addEventListener("mouseover", function () {
+  if (timeElapsed >= 60) {
+    doneButton.classList.add("hovered");
+  }
+});
+
+doneButton.addEventListener("mouseout", function () {
+  doneButton.classList.remove("hovered");
 });
 
 // Start the timer when the page loads
