@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Select the timer and button elements
+// Select the timer and button elements
 const timerElement = document.getElementById("timer");
 const doneButton = document.getElementById("done-button");
 
@@ -44,26 +45,22 @@ function startTimer() {
 
 // Handle Done button click
 doneButton.addEventListener("click", () => {
-  let taskId = "your-task-id"; // Set this dynamically based on the story
+  let taskId = "your-task-id"; // Replace with dynamic task ID
 
   if (timeElapsed < 60) {
     alert("Progress didn't save because the reading time is under 1 minute.");
+    
+    // Remove mistakenly stored progress if any
+    let tasksDone = JSON.parse(sessionStorage.getItem("tasksDone")) || [];
+    let updatedTasks = tasksDone.filter(id => id !== taskId);
+    sessionStorage.setItem("tasksDone", JSON.stringify(updatedTasks));
+
   } else {
     alert("Progress saved!");
-    storeProgress(taskId); // Store progress only if time is >= 60s
+    storeProgress(taskId); // Store progress only if timeElapsed >= 60
     clearInterval(timer);
     window.location.href = "index.html"; // Redirect after confirmation
   }
-});
-
-doneButton.addEventListener("mouseover", function () {
-  if (timeElapsed >= 60) {
-    doneButton.classList.add("hovered");
-  }
-});
-
-doneButton.addEventListener("mouseout", function () {
-  doneButton.classList.remove("hovered");
 });
 
 window.onload = startTimer;
