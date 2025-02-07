@@ -61,14 +61,11 @@ function startTimer() {
 doneButton.addEventListener("click", () => {
   if (timeElapsed < 60) {
     alert("Progress didn't save because the reading time is under 1 minute.");
+    
   } else {
     alert("Progress saved!");
     clearInterval(timer); // Stop the timer
-
-         // Redirect to file.html after the alert
-        window.location.href = "index.html";
-  }
-}
+    window.location.href = "index.html";
   }
 });
 
