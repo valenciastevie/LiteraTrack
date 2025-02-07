@@ -63,5 +63,20 @@ doneButton.addEventListener("click", () => {
   }
 });
 
+// Function to change button color on hover
+doneButton.addEventListener("mouseover", function () {
+  if (timeElapsed >= 60) {
+    doneButton.classList.add("hovered");
+  }
+});
+
+doneButton.addEventListener("mouseout", function () {
+  doneButton.classList.remove("hovered");
+});
+
+// Start the timer when the page loads
+window.onload = startTimer;
+
+
 // Start the timer when the page loads
 window.onload = startTimer;
