@@ -53,6 +53,7 @@ function startTimer() {
     // Enable the Done button after 1 minute
     if (timeElapsed >= 60) {
       doneButton.disabled = false;
+       storeProgress(taskId);
     }
   }, 1000);
 }
@@ -66,7 +67,6 @@ doneButton.addEventListener("click", () => {
     alert("Progress saved!");
     clearInterval(timer); // Stop the timer
     // Redirect to file.html after the alert
-    storeProgress(taskId);
     window.location.href = "index.html";
   }
 });
