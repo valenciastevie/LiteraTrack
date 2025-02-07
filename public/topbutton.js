@@ -65,6 +65,8 @@ doneButton.addEventListener("click", () => {
   } else {
     alert("Progress saved!");
     clearInterval(timer); // Stop the timer
+    // Redirect to file.html after the alert
+    window.location.href = "index.html";
   }
 });
 
