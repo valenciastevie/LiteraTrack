@@ -30,6 +30,7 @@ const doneButton = document.getElementById("done-button");
 let timeElapsed = 0;
 let timer;
 
+// Function to start the timer
 function startTimer() {
   timer = setInterval(() => {
     timeElapsed++;
@@ -43,24 +44,25 @@ function startTimer() {
   }, 1000);
 }
 
-// Handle Done button click
+// Handle "Done!" button click
 doneButton.addEventListener("click", () => {
-  let taskId = "your-task-id"; // Replace with dynamic task ID
+  let taskId = doneButton.getAttribute("data-task-id"); // Get taskId dynamically
 
   if (timeElapsed < 60) {
     alert("Progress didn't save because the reading time is under 1 minute.");
-    
-    // Remove mistakenly stored progress if any
+
+    // Remove mistakenly stored progress
     let tasksDone = JSON.parse(sessionStorage.getItem("tasksDone")) || [];
     let updatedTasks = tasksDone.filter(id => id !== taskId);
     sessionStorage.setItem("tasksDone", JSON.stringify(updatedTasks));
 
   } else {
     alert("Progress saved!");
-    storeProgress(taskId); // Store progress only if timeElapsed >= 60
+    storeProgress(taskId); // Store progress only after 60 seconds
     clearInterval(timer);
-    window.location.href = "index.html"; // Redirect after confirmation
+    window.location.href = "index.html"; // Redirect after saving
   }
 });
 
+// Start the timer when the page loads
 window.onload = startTimer;
