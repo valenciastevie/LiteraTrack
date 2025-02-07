@@ -288,30 +288,32 @@ img {
   padding-right: 30px;
 }
 
+/* Default button style */
 .button {
   width: 60px;
   height: 32px;
   background: #596758;
   border-radius: 10px;
-  display: inline;
-  margin-top: 70px;
-  margin-left: 130px;
   border-style: none;
-
   text-align: center;
   color: #fffbde;
-  text-decoration: none;
   font-family: "Cormorant Garamond", serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
+  cursor: not-allowed; /* Initially disabled */
+  transition: background-color 0.3s;
 }
 
-/* Change button color when hovered (and timer > 60s) */
-.button.hovered {
-  background-color: #4caf50; /* Green background */
+/* Enable cursor when time > 60s */
+.button.enabled {
   cursor: pointer;
 }
+
+/* Hover effect after 60 seconds */
+.button.enabled:hover,
+.button.hovered {
+  background-color: #4CAF50 !important; /* Green */
+}
+
 
 .progress {
   color: #596758;
