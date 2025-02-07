@@ -64,11 +64,6 @@ doneButton.addEventListener("click", () => {
   } else {
     alert("Progress saved!");
     clearInterval(timer); // Stop the timer
-       function storeProgress(taskId) {
-        // Retrieve the existing tasks or initialize as empty array
-        let tasksDone = JSON.parse(sessionStorage.getItem("tasksDone")) || [];
-
-        // If the task is not already recorded, add it to the tasks list
         if (!tasksDone.includes(taskId)) {
         tasksDone.push(taskId);
         sessionStorage.setItem("tasksDone", JSON.stringify(tasksDone)); // Store updated list
